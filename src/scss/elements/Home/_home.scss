@@ -1,0 +1,63 @@
+.home {
+  align-items: flex-end;
+  background-image: url("../../../assets/home/background-home-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  position: relative;
+  width: 100vw;
+  z-index: 1;
+
+  &_text_box {
+    color: $color-white;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    width: 450px;
+
+    &-text1 {
+      color: $color-second;
+      font-family: $font-alt;
+      font-size: 28px;
+      letter-spacing: 4.72px;
+      padding-bottom: 24px;
+    }
+
+    &-title {
+      font-size: 150px;
+      padding-bottom: 24px;
+    }
+
+    &-text2 {
+      color: $color-second;
+      font-family: $font-barlow;
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+
+  &_btn {
+    margin-bottom: 10%;
+    margin-right: 15%;
+
+    a {
+      background-color: $color-white;
+      border-radius: 50%;
+      color: $color-main;
+      display: inline-block;
+      font-size: 32px;
+      letter-spacing: 2px;
+      line-height: 274px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      transition: box-shadow 400ms cubic-bezier(0.2, 0, 0.7, 1);
+      width: 274px;
+
+      &:hover {
+        box-shadow: 0 0 1px 30px rgba(#979797, 0.25), 0 0 1px 60px rgba(#979797, 0.2), 0 0 1px 90px rgba(#979797, 0.15), 0 0 1px 120px rgba(#979797, 0.1);
+      }
+    }
+  }
+}
