@@ -3,7 +3,9 @@ import logo from "../../assets/shared/logo.svg";
 export const Nav = () => {
   return (
     <header className="header">
-      <img src={logo} alt="logo" />
+      <a href="/">
+        <img src={logo} alt="logo" />
+      </a>
       <nav>
         <ul>
           <li>

@@ -10,7 +10,7 @@ export const Home = () => {
         </p>
       </div>
       <div className="home_btn">
-        <a href="/">EXPLORE</a>
+        <a href="/destination">EXPLORE</a>
       </div>
     </section>
   );

@@ -1,0 +1,110 @@
+.destination {
+  align-items: flex-start;
+  background-image: url("../../../assets/destination/background-destination-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  position: relative;
+  width: 100vw;
+  z-index: 1;
+
+  &_left {
+    color: $color-white;
+    font-family: $font-alt;
+    font-size: 28px;
+    letter-spacing: 4.72px;
+    margin-top: 15%;
+    margin-left: 10%;
+    text-transform: uppercase;
+
+    p {
+      padding-bottom: 100px;
+
+      span {
+        font-weight: bold;
+        opacity: 0.25;
+        padding-right: 20px;
+      }
+    }
+
+    img {
+      transform: translateX(60px);
+    }
+  }
+
+  &_right {
+    color: $color-white;
+    margin-top: 19%;
+    margin-right: 15%;
+    width: 445px;
+
+    nav {
+      color: $color-second;
+      font-family: $font-alt;
+      font-size: 18px;
+      height: 37px;
+      letter-spacing: 2.7px;
+      line-height: 22px;
+      padding-bottom: 40px;
+
+      ul {
+        display: flex;
+        gap: 30px;
+
+        li {
+          cursor: pointer;
+          padding-bottom: 15px;
+
+          &:hover {
+            border-bottom: 3px solid $color-white;
+            color: $color-white;
+          }
+        }
+      }
+    }
+
+    h1 {
+      font-family: $font-base;
+      font-size: 100px;
+      line-height: 115px;
+      padding-bottom: 20px;
+    }
+
+    p {
+      color: $color-second;
+      font-family: $font-barlow;
+      font-size: 18px;
+      line-height: 32px;
+    }
+
+    hr {
+      background-color: #383b4b;
+      border: none;
+      height: 1px;
+      margin-bottom: 30px;
+      margin-top: 50px;
+    }
+
+    .info_box {
+      display: flex;
+      gap: 80px;
+
+      .info_title {
+        color: $color-second;
+        font-family: $font-alt;
+        font-size: 14px;
+        letter-spacing: 2.36px;
+        line-height: 17px;
+        padding-bottom: 10px;
+      }
+
+      .info_value {
+        color: $color-white;
+        font-family: $font-base;
+        font-size: 28px;
+      }
+    }
+  }
+}
