@@ -1,6 +1,6 @@
 import titan from "../../assets/destination/image-titan.png";
 
-export const TitanDest = ({ moonDestination, marsDestination, europaDestination, titanDestination }) => {
+export const TitanDest = ({ moonDestination, marsDestination, europaDestination, titanDestination, currentDestination }) => {
   return (
     <section className="destination">
       <div className="destination_left">
@@ -15,7 +15,9 @@ export const TitanDest = ({ moonDestination, marsDestination, europaDestination,
             <li onClick={moonDestination}>MOON</li>
             <li onClick={marsDestination}>MARS</li>
             <li onClick={europaDestination}>EUROPA</li>
-            <li onClick={titanDestination}>TITAN</li>
+            <li onClick={titanDestination} className={currentDestination === 3 && "active"}>
+              TITAN
+            </li>
           </ul>
         </nav>
         <h1>TITAN</h1>

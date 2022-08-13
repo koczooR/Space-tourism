@@ -1,6 +1,6 @@
 import europa from "../../assets/destination/image-europa.png";
 
-export const EuropaDest = ({ moonDestination, marsDestination, europaDestination, titanDestination }) => {
+export const EuropaDest = ({ moonDestination, marsDestination, europaDestination, titanDestination, currentDestination }) => {
   return (
     <section className="destination">
       <div className="destination_left">
@@ -14,7 +14,9 @@ export const EuropaDest = ({ moonDestination, marsDestination, europaDestination
           <ul>
             <li onClick={moonDestination}>MOON</li>
             <li onClick={marsDestination}>MARS</li>
-            <li onClick={europaDestination}>EUROPA</li>
+            <li onClick={europaDestination} className={currentDestination === 2 && "active"}>
+              EUROPA
+            </li>
             <li onClick={titanDestination}>TITAN</li>
           </ul>
         </nav>

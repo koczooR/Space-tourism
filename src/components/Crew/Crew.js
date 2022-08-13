@@ -25,16 +25,48 @@ export const Crew = () => {
 
   switch (currentDestination) {
     case 0:
-      return <CommanderCrew commanderCrew={commanderCrew} specialistCrew={specialistCrew} pilotCrew={pilotCrew} engineerCrew={engineerCrew} />;
+      return (
+        <CommanderCrew
+          commanderCrew={commanderCrew}
+          specialistCrew={specialistCrew}
+          pilotCrew={pilotCrew}
+          engineerCrew={engineerCrew}
+          currentDestination={currentDestination}
+        />
+      );
 
     case 1:
-      return <SpecialistCrew commanderCrew={commanderCrew} specialistCrew={specialistCrew} pilotCrew={pilotCrew} engineerCrew={engineerCrew} />;
+      return (
+        <SpecialistCrew
+          commanderCrew={commanderCrew}
+          specialistCrew={specialistCrew}
+          pilotCrew={pilotCrew}
+          engineerCrew={engineerCrew}
+          currentDestination={currentDestination}
+        />
+      );
 
     case 2:
-      return <PilotCrew commanderCrew={commanderCrew} specialistCrew={specialistCrew} pilotCrew={pilotCrew} engineerCrew={engineerCrew} />;
+      return (
+        <PilotCrew
+          commanderCrew={commanderCrew}
+          specialistCrew={specialistCrew}
+          pilotCrew={pilotCrew}
+          engineerCrew={engineerCrew}
+          currentDestination={currentDestination}
+        />
+      );
 
     case 3:
-      return <EngineerCrew commanderCrew={commanderCrew} specialistCrew={specialistCrew} pilotCrew={pilotCrew} engineerCrew={engineerCrew} />;
+      return (
+        <EngineerCrew
+          commanderCrew={commanderCrew}
+          specialistCrew={specialistCrew}
+          pilotCrew={pilotCrew}
+          engineerCrew={engineerCrew}
+          currentDestination={currentDestination}
+        />
+      );
 
     default:
   }

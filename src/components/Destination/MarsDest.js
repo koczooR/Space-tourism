@@ -1,6 +1,6 @@
 import mars from "../../assets/destination/image-mars.png";
 
-export const MarsDest = ({ moonDestination, marsDestination, europaDestination, titanDestination }) => {
+export const MarsDest = ({ moonDestination, marsDestination, europaDestination, titanDestination, currentDestination }) => {
   return (
     <section className="destination">
       <div className="destination_left">
@@ -13,7 +13,9 @@ export const MarsDest = ({ moonDestination, marsDestination, europaDestination, 
         <nav>
           <ul>
             <li onClick={moonDestination}>MOON</li>
-            <li onClick={marsDestination}>MARS</li>
+            <li onClick={marsDestination} className={currentDestination === 1 && "active"}>
+              MARS
+            </li>
             <li onClick={europaDestination}>EUROPA</li>
             <li onClick={titanDestination}>TITAN</li>
           </ul>

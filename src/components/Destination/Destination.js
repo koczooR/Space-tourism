@@ -31,6 +31,7 @@ export const Destination = () => {
           marsDestination={marsDestination}
           europaDestination={europaDestination}
           titanDestination={titanDestination}
+          currentDestination={currentDestination}
         />
       );
 
@@ -41,6 +42,7 @@ export const Destination = () => {
           marsDestination={marsDestination}
           europaDestination={europaDestination}
           titanDestination={titanDestination}
+          currentDestination={currentDestination}
         />
       );
 
@@ -51,6 +53,7 @@ export const Destination = () => {
           marsDestination={marsDestination}
           europaDestination={europaDestination}
           titanDestination={titanDestination}
+          currentDestination={currentDestination}
         />
       );
 
@@ -61,6 +64,7 @@ export const Destination = () => {
           marsDestination={marsDestination}
           europaDestination={europaDestination}
           titanDestination={titanDestination}
+          currentDestination={currentDestination}
         />
       );
     default:

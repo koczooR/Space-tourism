@@ -1,0 +1,111 @@
+.technology {
+  align-items: flex-start;
+  background-image: url("../../../assets/technology/background-technology-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  position: relative;
+  width: 100vw;
+  z-index: 1;
+
+  &_left {
+    color: $color-white;
+    font-family: $font-alt;
+    font-size: 28px;
+    letter-spacing: 4.72px;
+    margin-top: 15%;
+    margin-left: 10%;
+    text-transform: uppercase;
+
+    p {
+      padding-bottom: 150px;
+
+      span {
+        font-weight: bold;
+        opacity: 0.25;
+        padding-right: 20px;
+      }
+    }
+
+    .container {
+      display: flex;
+      gap: 80px;
+
+      .steps {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+
+          li {
+            .inactive {
+              align-items: center;
+              cursor: pointer;
+              background-color: transparent;
+              border: 1px solid rgba($color: $color-white, $alpha: 0.25);
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              height: 80px;
+              width: 80px;
+
+              &:hover {
+                border: 1px solid rgba($color: $color-white, $alpha: 1);
+              }
+            }
+
+            .active {
+              align-items: center;
+              color: $color-main;
+              cursor: pointer;
+              background-color: $color-white;
+              border: 1px solid rgba($color: $color-white, $alpha: 0.25);
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              height: 80px;
+              width: 80px;
+            }
+          }
+        }
+      }
+
+      .description {
+        .p1 {
+          color: $color-second;
+          font-family: $font-alt;
+          font-size: 16px;
+          letter-spacing: 2.7px;
+          line-height: 19px;
+          padding-bottom: 20px;
+        }
+
+        h1 {
+          font-family: $font-base;
+          font-size: 56px;
+          line-height: 64px;
+          padding-bottom: 30px;
+        }
+
+        .text {
+          color: $color-second;
+          font-family: $font-barlow;
+          font-size: 18px;
+          letter-spacing: normal;
+          line-height: 32px;
+          text-transform: none;
+          width: 444px;
+        }
+      }
+    }
+  }
+
+  &_right {
+    bottom: 15%;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+}

@@ -1,6 +1,6 @@
 import pilot from "../../assets/crew/image-victor-glover.png";
 
-export const PilotCrew = ({ commanderCrew, specialistCrew, pilotCrew, engineerCrew }) => {
+export const PilotCrew = ({ commanderCrew, specialistCrew, pilotCrew, engineerCrew, currentDestination }) => {
   return (
     <section className="crew">
       <div className="crew_left">
@@ -16,16 +16,16 @@ export const PilotCrew = ({ commanderCrew, specialistCrew, pilotCrew, engineerCr
         <nav>
           <ul>
             <li>
-              <span onClick={commanderCrew}></span>
+              <span onClick={commanderCrew} className={currentDestination === 0 ? "active" : "inactive"}></span>
             </li>
             <li>
-              <span onClick={specialistCrew}></span>
+              <span onClick={specialistCrew} className={currentDestination === 1 ? "active" : "inactive"}></span>
             </li>
             <li>
-              <span onClick={pilotCrew}></span>
+              <span onClick={pilotCrew} className={currentDestination === 2 ? "active" : "inactive"}></span>
             </li>
             <li>
-              <span onClick={engineerCrew}></span>
+              <span onClick={engineerCrew} className={currentDestination === 3 ? "active" : "inactive"}></span>
             </li>
           </ul>
         </nav>

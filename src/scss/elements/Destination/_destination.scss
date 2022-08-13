@@ -62,6 +62,11 @@
             color: $color-white;
           }
         }
+
+        .active {
+          color: $color-white;
+          border-bottom: 3px solid $color-white;
+        }
       }
     }
 
