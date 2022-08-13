@@ -45,7 +45,11 @@
       padding-left: 150px;
       padding-right: 300px;
 
-      a {
+      span {
+        font-weight: bold;
+      }
+
+      .inactive {
         color: $color-white;
         cursor: pointer;
         display: inline-block;
@@ -58,10 +62,18 @@
         &:hover {
           border-bottom: 3px solid rgba($color: $color-white, $alpha: 0.5);
         }
+      }
 
-        span {
-          font-weight: bold;
-        }
+      .active {
+        border-bottom: 3px solid $color-white;
+        color: $color-white;
+        cursor: pointer;
+        display: inline-block;
+        font-family: $font-alt;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 38px 0 35px 0;
+        text-decoration: none;
       }
     }
   }

@@ -1,4 +1,5 @@
 import logo from "../../assets/shared/logo.svg";
+import { NavLink } from "react-router-dom";
 
 export const Nav = () => {
   return (
@@ -9,24 +10,24 @@ export const Nav = () => {
       <nav>
         <ul>
           <li>
-            <a href="/">
+            <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "inactive")}>
               <span>00</span> HOME
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/destination">
+            <NavLink to="destination" className={({ isActive }) => (isActive ? "active" : "inactive")}>
               <span>01</span> DESTINATION
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/crew">
+            <NavLink to="crew" className={({ isActive }) => (isActive ? "active" : "inactive")}>
               <span>02</span> CREW
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/technology">
+            <NavLink to="technology" className={({ isActive }) => (isActive ? "active" : "inactive")}>
               <span>03</span> TECHNOLOGY
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>
