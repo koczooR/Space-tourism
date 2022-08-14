@@ -67,6 +67,7 @@
     align-items: center;
     background-image: url("../../../assets/home/background-home-tablet.jpg");
     flex-direction: column;
+    height: auto;
     justify-content: center;
 
     &_text_box {
@@ -142,7 +143,6 @@
 
 @media (max-width: 375px) {
   .home {
-    height: auto;
     background-image: url("../../../assets/home/background-home-mobile.jpg");
 
     &_text_box {
