@@ -7,7 +7,7 @@
   height: 100vh;
   justify-content: space-between;
   position: relative;
-  width: 100vw;
+  width: 100%;
   z-index: 1;
 
   &_left {
@@ -15,8 +15,9 @@
     font-family: $font-alt;
     font-size: 28px;
     letter-spacing: 4.72px;
-    margin-top: 15%;
     margin-left: 10%;
+    margin-top: 280px;
+    margin-right: 48px;
     text-transform: uppercase;
 
     p {
@@ -36,8 +37,8 @@
 
   &_right {
     color: $color-white;
-    margin-top: 19%;
-    margin-right: 15%;
+    margin-top: 370px;
+    margin-right: 10%;
     width: 445px;
 
     nav {
@@ -110,6 +111,86 @@
         font-family: $font-base;
         font-size: 28px;
       }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .destination {
+    &_left {
+      img {
+        width: 80%;
+      }
+    }
+
+    &_right {
+      nav {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 80px;
+        line-height: 95px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 30px;
+      }
+
+      .info_box {
+        .info_value {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .destination {
+    align-items: center;
+    background-image: url("../../../assets/destination/background-destination-tablet.jpg");
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+
+    &_left {
+      font-size: 20px;
+      letter-spacing: 3.38px;
+      margin-left: 0;
+      margin-top: 200px;
+      margin-right: 0;
+      text-align: center;
+      width: 100%;
+
+      p {
+        margin-left: 5%;
+        padding-bottom: 50px;
+        text-align: left;
+      }
+
+      img {
+        transform: none;
+        width: 300px;
+      }
+    }
+
+    &_right {
+      margin-top: 50px;
+      margin-right: 0;
+      text-align: center;
+
+      nav {
+        ul {
+          justify-content: center;
+        }
+      }
+    }
+
+    .info_box {
+      justify-content: center;
+      margin-bottom: 50px;
     }
   }
 }

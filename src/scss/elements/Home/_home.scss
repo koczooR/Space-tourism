@@ -7,7 +7,7 @@
   height: 100vh;
   justify-content: space-between;
   position: relative;
-  width: 100vw;
+  width: 100%;
   z-index: 1;
 
   &_text_box {
@@ -57,6 +57,47 @@
 
       &:hover {
         box-shadow: 0 0 1px 30px rgba(#979797, 0.25), 0 0 1px 60px rgba(#979797, 0.2), 0 0 1px 90px rgba(#979797, 0.15), 0 0 1px 120px rgba(#979797, 0.1);
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .home {
+    align-items: center;
+    background-image: url("../../../assets/home/background-home-tablet.jpg");
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+
+    &_text_box {
+      margin-bottom: auto;
+      margin-left: 0%;
+      margin-top: 200px;
+      text-align: center;
+
+      &-text1 {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      &-text2 {
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 120px;
+      }
+    }
+
+    &_btn {
+      margin-right: 0%;
+
+      a {
+        line-height: 242px;
+        width: 242px;
+
+        &:hover {
+          box-shadow: 0 0 1px 25px rgba(#979797, 0.25), 0 0 1px 50px rgba(#979797, 0.2), 0 0 1px 75px rgba(#979797, 0.15), 0 0 1px 100px rgba(#979797, 0.1);
+        }
       }
     }
   }

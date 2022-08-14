@@ -1,5 +1,3 @@
-import capsuleImg from "../../assets/technology/image-space-capsule-portrait.jpg";
-
 export const Capsule = ({ vehicle, spaceport, capsule, currentTech }) => {
   return (
     <section className="technology">
@@ -37,9 +35,7 @@ export const Capsule = ({ vehicle, spaceport, capsule, currentTech }) => {
           </div>
         </div>
       </div>
-      <div className="technology_right">
-        <img src={capsuleImg} alt="capsule" />
-      </div>
+      <div className="technology_right technology_right-capsule"></div>
     </section>
   );
 };
