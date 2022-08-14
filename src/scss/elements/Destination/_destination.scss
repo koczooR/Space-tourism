@@ -194,3 +194,53 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .destination {
+    &_left {
+      p {
+        margin-left: 0;
+        text-align: center;
+      }
+
+      img {
+        width: 170px;
+      }
+    }
+
+    &_right {
+      width: 327px;
+
+      nav {
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 2.36px;
+      }
+
+      h1 {
+        font-size: 56px;
+        line-height: 64px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 25px;
+      }
+
+      .info_box {
+        flex-direction: column;
+        gap: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .destination {
+    background-image: url("../../../assets/destination/background-destination-mobile.jpg");
+
+    &_right {
+      width: 250px;
+    }
+  }
+}

@@ -102,3 +102,51 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .home {
+    &_text_box {
+      width: 327px;
+
+      &-text1 {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+      }
+
+      &-title {
+        font-size: 80px;
+        line-height: 100px;
+      }
+
+      &-text2 {
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 80px;
+      }
+    }
+
+    &_btn {
+      a {
+        font-size: 20px;
+        line-height: 150px;
+        letter-spacing: 1.25px;
+        width: 150px;
+
+        &:hover {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .home {
+    background-image: url("../../../assets/home/background-home-mobile.jpg");
+
+    &_text_box {
+      width: 250px;
+    }
+  }
+}

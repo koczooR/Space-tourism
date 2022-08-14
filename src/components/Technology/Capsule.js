@@ -35,7 +35,9 @@ export const Capsule = ({ vehicle, spaceport, capsule, currentTech }) => {
           </div>
         </div>
       </div>
-      <div className="technology_right technology_right-capsule"></div>
+      <div className="technology_right technology_right-capsule">
+        <div className="img_container img_container-capsule"></div>
+      </div>
     </section>
   );
 };
