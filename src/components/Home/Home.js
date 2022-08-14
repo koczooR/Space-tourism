@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Home = () => {
   return (
     <section className="home">
@@ -10,7 +12,7 @@ export const Home = () => {
         </p>
       </div>
       <div className="home_btn">
-        <a href="/destination">EXPLORE</a>
+        <Link to="destination">EXPLORE</Link>
       </div>
     </section>
   );
