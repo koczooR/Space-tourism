@@ -1,14 +1,22 @@
 import logo from "../../assets/shared/logo.svg";
 import { NavLink } from "react-router-dom";
+import hamburgerMenu from "../../assets/shared/icon-hamburger.svg";
+import closeMenu from "../../assets/shared/icon-close.svg";
+import { useState } from "react";
 
 export const Nav = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <header className="header">
-      <a href="/">
+      <a href="/" className="logo">
         <img src={logo} alt="logo" />
       </a>
       <nav>
-        <ul>
+        <button className="hamburgerMenu" onClick={() => setIsExpanded(!isExpanded)}>
+          <img src={isExpanded ? closeMenu : hamburgerMenu} alt="menu" />
+        </button>
+        <ul className={isExpanded ? "nav_menu expanded" : "nav_menu"}>
           <li>
             <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "inactive")}>
               <span>00</span> HOME
