@@ -1,6 +1,6 @@
-export const Spaceport = ({ vehicle, spaceport, capsule, currentTech }) => {
+export const Spaceport = ({ vehicle, spaceport, capsule, currentTech, onTouchStart, onTouchMove, onTouchEnd }) => {
   return (
-    <section className="technology">
+    <section className="technology" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
       <div className="technology_left">
         <p>
           <span>03</span> Space launch 101

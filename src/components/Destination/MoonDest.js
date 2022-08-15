@@ -1,8 +1,17 @@
 import moon from "../../assets/destination/image-moon.png";
 
-export const MoonDest = ({ moonDestination, marsDestination, europaDestination, titanDestination, currentDestination }) => {
+export const MoonDest = ({
+  moonDestination,
+  marsDestination,
+  europaDestination,
+  titanDestination,
+  currentDestination,
+  onTouchStart,
+  onTouchMove,
+  onTouchEnd,
+}) => {
   return (
-    <section className="destination">
+    <section className="destination" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
       <div className="destination_left">
         <p>
           <span>01</span> Pick your destination

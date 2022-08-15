@@ -1,8 +1,17 @@
 import europa from "../../assets/destination/image-europa.png";
 
-export const EuropaDest = ({ moonDestination, marsDestination, europaDestination, titanDestination, currentDestination }) => {
+export const EuropaDest = ({
+  moonDestination,
+  marsDestination,
+  europaDestination,
+  titanDestination,
+  currentDestination,
+  onTouchStart,
+  onTouchMove,
+  onTouchEnd,
+}) => {
   return (
-    <section className="destination">
+    <section className="destination" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
       <div className="destination_left">
         <p>
           <span>01</span> Pick your destination

@@ -6,6 +6,35 @@ import { TitanDest } from "./TitanDest";
 
 export const Destination = () => {
   const [currentDestination, setCurrentDestination] = useState(0);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
+
+  const onTouchEnd = () => {
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe) {
+      setCurrentDestination((prevState) => prevState + 1);
+      if (currentDestination === 3) {
+        setCurrentDestination(0);
+      }
+    }
+    if (isRightSwipe) {
+      setCurrentDestination((prevState) => prevState - 1);
+      if (currentDestination === 0) {
+        setCurrentDestination(3);
+      }
+    }
+  };
 
   const moonDestination = () => {
     setCurrentDestination(0);
@@ -32,6 +61,9 @@ export const Destination = () => {
           europaDestination={europaDestination}
           titanDestination={titanDestination}
           currentDestination={currentDestination}
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
         />
       );
 
@@ -43,6 +75,9 @@ export const Destination = () => {
           europaDestination={europaDestination}
           titanDestination={titanDestination}
           currentDestination={currentDestination}
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
         />
       );
 
@@ -54,6 +89,9 @@ export const Destination = () => {
           europaDestination={europaDestination}
           titanDestination={titanDestination}
           currentDestination={currentDestination}
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
         />
       );
 
@@ -65,6 +103,9 @@ export const Destination = () => {
           europaDestination={europaDestination}
           titanDestination={titanDestination}
           currentDestination={currentDestination}
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
         />
       );
     default:

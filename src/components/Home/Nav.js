@@ -18,22 +18,22 @@ export const Nav = () => {
         </button>
         <ul className={isExpanded ? "nav_menu expanded" : "nav_menu"}>
           <li>
-            <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "inactive")}>
+            <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "inactive")} onClick={() => setIsExpanded(!isExpanded)}>
               <span>00</span> HOME
             </NavLink>
           </li>
           <li>
-            <NavLink to="destination" className={({ isActive }) => (isActive ? "active" : "inactive")}>
+            <NavLink to="destination" className={({ isActive }) => (isActive ? "active" : "inactive")} onClick={() => setIsExpanded(!isExpanded)}>
               <span>01</span> DESTINATION
             </NavLink>
           </li>
           <li>
-            <NavLink to="crew" className={({ isActive }) => (isActive ? "active" : "inactive")}>
+            <NavLink to="crew" className={({ isActive }) => (isActive ? "active" : "inactive")} onClick={() => setIsExpanded(!isExpanded)}>
               <span>02</span> CREW
             </NavLink>
           </li>
           <li>
-            <NavLink to="technology" className={({ isActive }) => (isActive ? "active" : "inactive")}>
+            <NavLink to="technology" className={({ isActive }) => (isActive ? "active" : "inactive")} onClick={() => setIsExpanded(!isExpanded)}>
               <span>03</span> TECHNOLOGY
             </NavLink>
           </li>

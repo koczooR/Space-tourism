@@ -1,8 +1,8 @@
 import commander from "../../assets/crew/image-douglas-hurley.png";
 
-export const CommanderCrew = ({ commanderCrew, specialistCrew, pilotCrew, engineerCrew, currentDestination }) => {
+export const CommanderCrew = ({ commanderCrew, specialistCrew, pilotCrew, engineerCrew, currentCrew, onTouchStart, onTouchMove, onTouchEnd }) => {
   return (
-    <section className="crew">
+    <section className="crew" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
       <div className="crew_left">
         <p>
           <span>02</span> Meet your crew
@@ -16,16 +16,16 @@ export const CommanderCrew = ({ commanderCrew, specialistCrew, pilotCrew, engine
         <nav>
           <ul>
             <li>
-              <span onClick={commanderCrew} className={currentDestination === 0 ? "active" : "inactive"}></span>
+              <span onClick={commanderCrew} className={currentCrew === 0 ? "active" : "inactive"}></span>
             </li>
             <li>
-              <span onClick={specialistCrew} className={currentDestination === 1 ? "active" : "inactive"}></span>
+              <span onClick={specialistCrew} className={currentCrew === 1 ? "active" : "inactive"}></span>
             </li>
             <li>
-              <span onClick={pilotCrew} className={currentDestination === 2 ? "active" : "inactive"}></span>
+              <span onClick={pilotCrew} className={currentCrew === 2 ? "active" : "inactive"}></span>
             </li>
             <li>
-              <span onClick={engineerCrew} className={currentDestination === 3 ? "active" : "inactive"}></span>
+              <span onClick={engineerCrew} className={currentCrew === 3 ? "active" : "inactive"}></span>
             </li>
           </ul>
         </nav>
