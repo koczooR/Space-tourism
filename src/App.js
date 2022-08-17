@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Crew } from "./components/Crew/Crew";
 import { Destination } from "./components/Destination/Destination";
 import { Home } from "./components/Home/Home";
@@ -7,7 +7,7 @@ import { Technology } from "./components/Technology/Technology";
 
 export function App() {
   return (
-    <Router>
+    <>
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -15,6 +15,6 @@ export function App() {
         <Route path="/crew" element={<Crew />} />
         <Route path="/technology" element={<Technology />} />
       </Routes>
-    </Router>
+    </>
   );
 }
