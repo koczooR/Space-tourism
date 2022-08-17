@@ -1,4 +1,11 @@
+import { useSpring, animated } from "react-spring";
+
 export const Capsule = ({ vehicle, spaceport, capsule, currentTech, onTouchStart, onTouchMove, onTouchEnd }) => {
+  const styles = useSpring({
+    from: { transform: "scale(0)", opacity: 0 },
+    to: { transform: "scale(1)", opacity: 1 },
+  });
+
   return (
     <section className="technology" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
       <div className="technology_left">
@@ -25,18 +32,18 @@ export const Capsule = ({ vehicle, spaceport, capsule, currentTech, onTouchStart
               </li>
             </ul>
           </div>
-          <div className="description">
+          <animated.div className="description" style={styles}>
             <p className="p1">THE TERMINOLOGY…</p>
             <h1>SPACE CAPSULE</h1>
             <p className="text">
               A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule
               is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.
             </p>
-          </div>
+          </animated.div>
         </div>
       </div>
       <div className="technology_right technology_right-capsule">
-        <div className="img_container img_container-capsule"></div>
+        <animated.div className="img_container img_container-capsule" style={styles}></animated.div>
       </div>
     </section>
   );

@@ -1,18 +1,26 @@
 import specialist from "../../assets/crew/image-mark-shuttleworth2.png";
+import { useSpring, animated } from "react-spring";
 
 export const SpecialistCrew = ({ commanderCrew, specialistCrew, pilotCrew, engineerCrew, currentCrew, onTouchStart, onTouchMove, onTouchEnd }) => {
+  const styles = useSpring({
+    from: { transform: "scale(0)", opacity: 0 },
+    to: { transform: "scale(1)", opacity: 1 },
+  });
+
   return (
     <section className="crew" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
       <div className="crew_left">
         <p>
           <span>02</span> Meet your crew
         </p>
-        <p className="crew_title">Mission Specialist </p>
-        <h1>MARK SHUTTLEWORTH</h1>
-        <p className="crew_description">
+        <animated.p className="crew_title" style={styles}>
+          Mission Specialist{" "}
+        </animated.p>
+        <animated.h1 style={styles}>MARK SHUTTLEWORTH</animated.h1>
+        <animated.p className="crew_description" style={styles}>
           Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the
           first South African to travel to space as a space tourist.
-        </p>
+        </animated.p>
         <nav>
           <ul>
             <li>
@@ -31,7 +39,7 @@ export const SpecialistCrew = ({ commanderCrew, specialistCrew, pilotCrew, engin
         </nav>
       </div>
       <div className="crew_right">
-        <img src={specialist} alt="commander" />
+        <animated.img src={specialist} style={styles} alt="commander" />
       </div>
     </section>
   );

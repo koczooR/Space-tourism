@@ -1,18 +1,26 @@
 import engineer from "../../assets/crew/image-anousheh-ansari.png";
+import { useSpring, animated } from "react-spring";
 
 export const EngineerCrew = ({ commanderCrew, specialistCrew, pilotCrew, engineerCrew, currentCrew, onTouchStart, onTouchMove, onTouchEnd }) => {
+  const styles = useSpring({
+    from: { transform: "scale(0)", opacity: 0 },
+    to: { transform: "scale(1)", opacity: 1 },
+  });
+
   return (
     <section className="crew" onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
       <div className="crew_left">
         <p>
           <span>02</span> Meet your crew
         </p>
-        <p className="crew_title">Flight Engineer</p>
-        <h1>Anousheh Ansari</h1>
-        <p className="crew_description">
+        <animated.p className="crew_title" style={styles}>
+          Flight Engineer
+        </animated.p>
+        <animated.h1 style={styles}>Anousheh Ansari</animated.h1>
+        <animated.p className="crew_description" style={styles}>
           Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first
           self-funded woman to fly to the ISS, and the first Iranian in space.
-        </p>
+        </animated.p>
         <nav>
           <ul>
             <li>
@@ -31,7 +39,7 @@ export const EngineerCrew = ({ commanderCrew, specialistCrew, pilotCrew, enginee
         </nav>
       </div>
       <div className="crew_right">
-        <img src={engineer} alt="commander" />
+        <animated.img src={engineer} style={styles} alt="commander" />
       </div>
     </section>
   );
